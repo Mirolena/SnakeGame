@@ -18,7 +18,7 @@ SDL_Point Apples::getPosition() const {
 }
 
 void Apples::render(SDL_Renderer* renderer) const {
-    SDL_SetRenderDrawColor(renderer, 255, 0, 0, 255);  // Apples color
+    SDL_SetRenderDrawColor(renderer, 255, 0, 0, 255);  // Culoare mere
     SDL_Rect rect = { position.x, position.y, tileSize, tileSize };
     SDL_RenderFillRect(renderer, &rect);
 }

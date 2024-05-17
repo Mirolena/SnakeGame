@@ -22,7 +22,7 @@ void Game::run() {
         handleEvents();
         update();
         render();
-        SDL_Delay(170);  // Control the speed of the game
+        SDL_Delay(170);  // Viteza jocului
     }
 
     clean();
@@ -83,12 +83,12 @@ void Game::update() {
     }
     if (snake->hasCollided()) {
         std::cout << "YOU LOST ;-;";
-        isRunning = false;  // End the game if the snake collides with itself or the boundary
+        isRunning = false;  // Sfarseste jocul daca sarpele da collide cu el insisi sau cu perete
     }
 }
 
 void Game::render() {
-    SDL_SetRenderDrawColor(renderer, 0, 0, 0, 255);  // Clear screen with black
+    SDL_SetRenderDrawColor(renderer, 0, 0, 0, 255);  // Da clear ecranului cu negru
     SDL_RenderClear(renderer);
 
     snake->render(renderer);
